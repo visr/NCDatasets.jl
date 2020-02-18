@@ -9,6 +9,7 @@ version = "0.11.6"
 CFTime = "179af706-886a-5703-950a-314cd64e0468"
 DataStructures = "864edb3b-99cc-5e75-8d2d-829cb0a9cfe8"
 Dates = "ade2ca70-3891-5945-98fb-dc099432e06a"
+DiskArrays = "3c3547ce-8d99-4f5e-a174-61eb10b00ae3"
 NetCDF_jll = "7243133f-43d8-5620-bbf4-c2c921802cf3"
 Printf = "de0858da-6303-5e67-8744-51eddeeeb8d7"
 
