@@ -22,15 +22,15 @@ using NetCDF_jll
 using Dates
 using Printf
 
-using AbstractDiskArray
 using Base
 import Base.convert
 import Base: close
 import Base: Array
 using CFTime
-using Dates
 using DataStructures: OrderedDict
-using Printf
+using DiskArrays
+import DiskArrays: readblock!, writeblock!, AbstractDiskArray, eachchunk, GridChunks,
+       estimate_chunksize, haschunks, Chunked, Unchunked
 
 export CFTime
 export daysinmonth, daysinyear, yearmonthday, yearmonth, monthday
