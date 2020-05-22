@@ -799,16 +799,6 @@ function nc_get_vara!(ncid::Integer,varid::Integer,startp,countp,ip::Array{Vecto
     end
 end
 
-# do we need nc_put_vara/nc_get_vara! for Array{String,N} ?
-function nc_get_vara!(ncid::Integer,varid::Integer,startp,countp,ip::Array{Char,N}) where N
-    tmp = Array{UInt8,N}(undef,size(ip))
-    nc_get_vara!(ncid,varid,startp,countp,tmp)
-    for i in eachindex(tmp)
-        ip[i] = Char(tmp[i])
-    end
-end
-
-
 function nc_put_vars(ncid::Integer,varid::Integer,startp,countp,stridep,
                      op::Array{Char,N}) where N
     tmp = Array{UInt8,N}(undef,size(op))
