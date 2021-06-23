@@ -311,12 +311,6 @@ export nomissing
 
 # Implement the DiskArrays interface
 
-function resizable_indices(v::Variable{T,N}) where {T,N}
-    unlimdims = nc_inq_unlimdims(v.ds.ncid)
-    return filter(l -> v.dimids[l] in unlimdims,ntuple(identity,Val(N)))
-end
-
-
 function readblock!(v::Variable, data, r::AbstractUnitRange...)
 #    @show "read "
     start = [first(i)-1 for i in reverse(r)]

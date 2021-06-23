@@ -30,7 +30,7 @@ using CFTime
 using DataStructures: OrderedDict
 using DiskArrays
 import DiskArrays: readblock!, writeblock!, AbstractDiskArray, eachchunk, GridChunks,
-       estimate_chunksize, haschunks, Chunked, Unchunked, resizable_indices
+       estimate_chunksize, haschunks, Chunked, Unchunked
 
 export CFTime
 export daysinmonth, daysinyear, yearmonthday, yearmonth, monthday
